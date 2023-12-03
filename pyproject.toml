@@ -15,6 +15,9 @@ requires-python = ">= 3.8"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.pytest.ini_options]
+addopts = "--ignore-glob=*/_template/*"
+
 [tool.rye]
 managed = true
 dev-dependencies = []
