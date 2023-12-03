@@ -1,0 +1,23 @@
+[project]
+name = "advent-of-code-2023"
+version = "0.1.0"
+description = "Solutions to the problems at adventofcode.com"
+authors = [
+    { name = "Graham Knapp", email = "graham.knapp@gmail.com" }
+]
+dependencies = [
+    "pytest>=7.4.3",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
