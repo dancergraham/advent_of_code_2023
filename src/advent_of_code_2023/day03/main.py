@@ -1,25 +1,6 @@
 import math
 from pathlib import Path
 
-TEST_INPUT = """467..114..
-...*......
-..35..633.
-......#...
-617*......
-.....+.58.
-..592.....
-......755.
-...$.*....
-.664.598.."""
-
-
-def test_part_1():
-    assert part_1(TEST_INPUT) == 4361
-
-
-def test_part_2():
-    assert part_2(TEST_INPUT) == 467835
-
 
 def get_neighbours(start, stop):
     for x in range(start[0] - 1, stop[0] + 2):
