@@ -12,6 +12,7 @@ def try_get_input(day: int):
     with open(f"advent_of_code_2023/day{day:>02}/input.txt", mode="wb") as f:
         f.write(r.content)
 
+
 def main():
     day = sys.argv[1].zfill(2)
     print("Creating new day")
