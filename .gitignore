@@ -5,8 +5,13 @@ build/
 dist/
 wheels/
 *.egg-info
+`/.pytest_cache/
+
+# data files
+*/input.txt
+.cookie
 
 # venv
 .venv
-/.pytest_cache/
-*/input.txt
+
+
