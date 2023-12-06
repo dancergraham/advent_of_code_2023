@@ -28,20 +28,20 @@ class MultiRangeMap:
 
 
 def parse_input(input_str: str):
-    lines = (l for l in input_str.splitlines())
+    lines = iter(input_str.splitlines())
     seeds = next(lines)[7:].split()
     yield [int(seed) for seed in seeds]
+    range_maps = None
     for line in lines:
         if not line:
             continue
         if line.endswith("map:"):
-            if "rangemaps" in locals():
-                yield MultiRangeMap(rangemaps)
-            print(line)
-            rangemaps = []
+            if range_maps is not None:
+                yield MultiRangeMap(range_maps)
+            range_maps = []
             continue
-        rangemaps.append(RangeMap(*[int(x) for x in line.split()]))
-    yield MultiRangeMap(rangemaps)
+        range_maps.append(RangeMap(*[int(x) for x in line.split()]))
+    yield MultiRangeMap(range_maps)
 
 
 def main():
