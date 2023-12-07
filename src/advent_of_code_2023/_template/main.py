@@ -6,8 +6,8 @@ def parse_input(input_str: str):
 
 
 def main():
-    print(f"{part_1(Path('input.txt').read_text())}")
-    print(f"{part_2(Path('input.txt').read_text())}")
+    print(f"Part 1: {part_1(Path('input.txt').read_text())}")
+    print(f"Part 2: {part_2(Path('input.txt').read_text())}")
 
 
 def part_1(input_str):
